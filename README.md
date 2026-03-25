@@ -170,7 +170,10 @@ stealth-id/
 │   ├── prove_membership.nr
 │   ├── prove_human.nr
 │   └── prove_agent_with_sponsor.nr
-├── contracts/                 # Merkle Tree, Verifier, Revocation Set (Foundry)
+├── contracts/                 # ERC-8004 레지스트리 + Merkle Tree (Foundry)
+│   ├── src/erc8004/           # ERC-8004 레퍼런스 컨트랙트 (UUPS proxy)
+│   ├── script/                # 배포 스크립트 (Anvil + vanity alias)
+│   └── test/                  # 통합 테스트
 └── packages/
     ├── credential-issuer/     # Sumsub 통합, attestation 발급 (서버)
     ├── prover/                # User Prover — commitment/proof 생성 (클라이언트)
@@ -201,6 +204,7 @@ stealth-id/
 
 ## 관련 문서
 
+- [개발 환경 셋업 가이드](./docs/dev-setup.md) — 로컬 Anvil 배포, ERC-8004 컨트랙트 테스트 환경 구성
 - [Full MVP 설계 문서](./docs/design-full-mvp.md) — 아키텍처, 구현 순서, reviewer concerns 포함
 - [Privacy Pool 로드맵 Phase 4](https://github.com/joey-to-nexus/privacy-pool/blob/main/docs/roadmap.md) — Identity & Reputation
 - [Privacy Pool ADR-002](https://github.com/joey-to-nexus/privacy-pool/blob/main/docs/adr/002-registration-tree.md) — Registration Tree
