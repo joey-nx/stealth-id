@@ -7,3 +7,8 @@ dist/
 out/
 cache/
 target/
+
+# Foundry artifacts
+contracts/broadcast/
+contracts/deployments/
+contracts/lib/
